@@ -35,6 +35,11 @@ jobs:
       if: false
       run: mvn org.owasp:dependency-check-maven:check
 
+    - name: Run Unit Tests
+      run: mvn test
+      env:
+        CI: true 
+
     - name: Build code and create docker images
       run: mvn clean install docker:build -Dimage.registry=${{secrets.DOCKER_REGISTRY_USER}} -Dimage.tag=$GITHUB_REF_NAME
 

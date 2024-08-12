@@ -53,6 +53,7 @@ jobs:
       run: |
        CURRENT_FOLDER_NAME=$(basename $(pwd))
        docker push ${{env.DOCKER_REGISTRY_URL}}/$CURRENT_FOLDER_NAME:$GITHUB_REF_NAME 
+       
 
        
 

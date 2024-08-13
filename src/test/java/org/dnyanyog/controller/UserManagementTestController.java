@@ -27,7 +27,13 @@ public class UserManagementTestController extends AbstractTestNGSpringContextTes
     RequestBuilder requestBuilder =
         MockMvcRequestBuilders.post("/api/v1/directory/add")
             .content(
-                "")
+                "<AddUserRequest>\r\n"
+                    + "    <userName>JohnDoe</userName>\r\n"
+                    + "    <email>john.doe@example.com</email>\r\n"
+                    + "    <mobileNumber>8547476528</mobileNumber>\r\n"
+                    + "    <role>Admin</role>\r\n"
+                    + "    <password>123</password>\r\n"
+                    + "</AddUserRequest>")
             .contentType(MediaType.APPLICATION_XML_VALUE)
             .accept(MediaType.APPLICATION_XML_VALUE);
 

@@ -25,7 +25,7 @@ public class UserManagementTestController extends AbstractTestNGSpringContextTes
   @Order(1)
   public void userAddSuccessXml() throws Exception {
     RequestBuilder requestBuilder =
-        MockMvcRequestBuilders.post("/api/v1/directory/add")
+        MockMvcRequestBuilders.post("/api/v1/directory/")
             .content(
                 "<AddUserRequest>\r\n"
                     + "    <userName>JohnDoe</userName>\r\n"
